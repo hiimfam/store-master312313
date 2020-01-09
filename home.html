@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
+</head>
+<body>
+
+
+<div class="header">
+    <a href="home.html"><img src="photos/best-buy-logo-png.png" height="748" width="1280" id="logo"/></a>
+    <form>
+        <input type="text" placeholder="Search Best Buy">
+    </form>
+</div>
+<div class="nav">
+    <tr><a href="home.html">Home</a></tr>
+    <tr><a href="inventory.html">Inventory</a></tr>
+    <tr><a href="feedback.html">Feedback</a></tr>
+</div>
+<div class="ad">
+    <a href="inventory.html"><img src="photos/imgad.jfif" height="123" width="1232"/></a>
+</div>
+<div class="main-banner" id="main-banner">
+    <div class="imgban" id="imgban3">
+
+    </div>
+    <div class="imgban" id="imgban2">
+
+    </div>
+    <div class="imgban" id="imgban1">
+
+    </div>
+</div>
+<div class="head1">
+    <h><b>Shop some of our hottest categories</b></h>
+</div>
+<div class="flex-container">
+    <div><a href="inventory.html">TVs and Home Theatres</a></div>
+    <div><a href="inventory.html">Computers and Tablets</a></div>
+    <div><a href="inventory.html">Headphones and Speakers</a></div>
+    <div><a href="inventory.html">Video Games and Consoles</a></div>
+    <div><a href="inventory.html">Cell Phones</a></div>
+    <div><a href="inventory.html">Wearable Technology</a></div>
+    <div><a href="inventory.html">Major Appliances</a></div>
+    <div><a href="inventory.html">Vacuums</a></div>
+    <div><a href="inventory.html">Small Kitchen Appliances</a></div>
+    <div><a href="inventory.html">Cameras and Camcorders</a></div>
+    <div><a href="inventory.html">Smart Home</a></div>
+    <div><a href="inventory.html">Luggage and Travel</a></div>
+</div>
+<div class="ad2">
+    <a href="inventory.html"><img src="photos/imgad1.jfif" height="123" width="1232"/></a>
+</div>
+<div id="test"></div>
+<div class="footer">
+    <p>Terms & Conditions  |  Conditions of Use  |  Online Policies  |  Internet-Based Ads  |  Privacy Policy  |  Accessibility Policy  |  Geek Squad Terms & Conditions  |  Product Recalls  |  Credits</p>
+</div>
+<div id="toggleMenu" onclick="toggleMenu()"></div>
+<nav id="menu">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+<script>
+    var bannerStatus = 1;
+    var bannerTimer = 3000;
+
+    window.onload = function () {
+        bannerLoop();
+    };
+
+    var startBannerLoop = setInterval(function(){
+        bannerLoop();
+    }, bannerTimer);
+    function  bannerLoop() {
+        if (bannerStatus === 1) {
+            document.getElementById("imgban2").style.opacity = "0";
+            setTimeout(function () {
+                document.getElementById("imgban1").style.right = "0px";
+                document.getElementById("imgban1").style.zIndex = "1000";
+                document.getElementById("imgban2").style.right = "-1200px";
+                document.getElementById("imgban2").style.zIndex = "1500";
+                document.getElementById("imgban3").style.right = "1200px";
+                document.getElementById("imgban3").style.zIndex = "500";
+
+            }, 500);
+            setTimeout (function(){
+                document.getElementById("imgban2").style.opacity = "1";
+            }, 1000);
+            bannerStatus = 2;
+        }
+       else if (bannerStatus === 2) {
+            document.getElementById("imgban2").style.opacity = "0";
+            setTimeout(function () {
+                document.getElementById("imgban2").style.right = "0px";
+                document.getElementById("imgban2").style.zIndex = "1000";
+                document.getElementById("imgban3").style.right = "-1200px";
+                document.getElementById("imgban3").style.zIndex = "1500";
+                document.getElementById("imgban1").style.right = "1200px";
+                document.getElementById("imgban1").style.zIndex = "500";
+
+            }, 500);
+            setTimeout (function(){
+                document.getElementById("imgban3").style.opacity = "1";
+            }, 1000);
+            bannerStatus = 3;
+        }
+        if (bannerStatus === 3) {
+            document.getElementById("imgban1").style.opacity = "0";
+            setTimeout(function () {
+                document.getElementById("imgban3").style.right = "0px";
+                document.getElementById("imgban3").style.zIndex = "1000";
+                document.getElementById("imgban1").style.right = "-1200px";
+                document.getElementById("imgban1").style.zIndex = "1500";
+                document.getElementById("imgban2").style.right = "1200px";
+                document.getElementById("imgban2").style.zIndex = "500";
+
+            }, 500);
+            setTimeout (function(){
+                document.getElementById("1").style.opacity = "1";
+            }, 1000);
+            bannerStatus = 1;
+        }
+
+    }
+</script>
+<script>
+    var toggleStatus = 1;
+    function toggleMenu() {
+        if(toggleStatus == 1){
+            toggleStatus = 0;
+            document.getElementById("menu").style.left = "-240px";
+        }
+        else if (toggleStatus == 0){
+            toggleStatus = 1;
+            document.getElementById("menu").style.left = "0px"
+        }
+    }
+</script>
+</body>
+</html>

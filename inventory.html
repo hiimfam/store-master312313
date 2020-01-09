@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+    <a href="home.html"><img src="photos/best-buy-logo-png.png" height="748" width="1280" id="logo"/></a>
+    <form>
+        <input type="text" placeholder="Search Best Buy">
+    </form>
+</div>
+<div class="nav">
+    <tr><a href="home.html">Home</a></tr>
+    <tr><a href="inventory.html">Inventory</a></tr>
+    <tr><a href="feedback.html">Feedback</a></tr>
+</div>
+<div class="head2">
+<h1>Inventory</h1>
+</div>
+<div class="categories">
+    <h1><b>Categories</b></h1>
+    <a href="#">Everyday Computers</a>
+    <br>
+    <a href="#">Gaming Desktop Computers</a>
+    <br>
+    <a href="#">All-in-One Computers</a><br>
+    <a href="#">Apple iMac</a><br>
+    <a href="#">Apple Pro</a><br>
+    <a href="#">Apple Mini</a><br>
+    <br>
+    <h1><b>Current Offers</b></h1>
+    On Sale <input type="radio" name="option" value="option1"><br>
+    On Clearance <input type="radio" name="option" value="option2"><br>
+    Refurbished <input type="radio" name="option" value="option3"><br>
+    Online Only <input type="radio" name="option" value="option4"><br>
+    Open Box <input type="radio" name="option" value="option5"><br>
+</div>
+<div class="flex-container1">
+    <div><a href="inventory.html"><img src="photos/52151.PNG" height="411" width="262"/></a></div>
+    <div><a href="inventory.html"><img src="photos/51.PNG" height="389" width="246"/></a></div>
+    <div><a href="inventory.html"><img src="photos/72.PNG" height="368" width="248"/></a></div>
+    <div><a href="inventory.html"><img src="photos/123.PNG" height="375" width="282"/></a></div>
+    <div><a href="inventory.html"><img src="photos/125.PNG" height="375" width="241"/></a></div>
+    <div><a href="inventory.html"><img src="photos/46.PNG" height="379" width="259"/></a></div>
+    <div><a href="inventory.html"><img src="photos/722.PNG" height="381" width="257"/></a></div>
+    <div><a href="inventory.html"><img src="photos/342.PNG" height="374" width="237"/></a></div>
+    <div><a href="inventory.html"><img src="photos/38.PNG" height="368" width="250"/></a></div>
+    <div><a href="inventory.html"><img src="photos/225.PNG" height="374" width="247"/></a></div>
+    <div><a href="inventory.html"><img src="photos/123.PNG" height="375" width="282"/></a></div>
+    <div><a href="inventory.html"><img src="photos/72.PNG" height="368" width="248"/></a></div>
+</div>
+
+<div id="toggleMenu" onclick="toggleMenu()"></div>
+<nav id="menu">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+<script>
+    var toggleStatus = 1;
+    function toggleMenu() {
+        if(toggleStatus == 1){
+            toggleStatus = 0;
+            document.getElementById("menu").style.left = "-240px";
+        }
+        else if (toggleStatus == 0){
+            toggleStatus = 1;
+            document.getElementById("menu").style.left = "0px"
+        }
+    }
+</script>
+</body>
+</html>

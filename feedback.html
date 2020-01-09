@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+    <a href="home.html"><img src="photos/best-buy-logo-png.png" height="748" width="1280" id="logo"/></a>
+    <form>
+        <input type="text" placeholder="Search Best Buy">
+    </form>
+</div>
+<div class="nav">
+    <tr><a href="home.html">Home</a></tr>
+    <tr><a href="inventory.html">Inventory</a></tr>
+    <tr><a href="feedback.html">Feedback</a></tr>
+</div>
+<div class="head1">
+    <h><b>Give Us Feedback</b></h>
+</div>
+<div class="form">
+<p>How would you rate your experience with Best Buy today?</p>
+    Terrible <input type="radio" name="option" value="option1"><br>
+    Bad <input type="radio" name="option" value="option2"><br>
+    Neutral <input type="radio" name="option" value="option3"><br>
+    Good <input type="radio" name="option" value="option4"><br>
+    Excellent <input type="radio" name="option" value="option5"><br>
+    <br>
+    <p>Do you have any thoughts to share?</p>
+    <input type="text" name="feedback">
+    <br>
+    <input type="submit" name="Submit">
+</div>
+<div class="footer">
+    <p>Terms & Conditions  |  Conditions of Use  |  Online Policies  |  Internet-Based Ads  |  Privacy Policy  |  Accessibility Policy  |  Geek Squad Terms & Conditions  |  Product Recalls  |  Credits</p>
+</div>
+<div id="toggleMenu" onclick="toggleMenu()"></div>
+<nav id="menu">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+<script>
+    var toggleStatus = 1;
+    function toggleMenu() {
+        if(toggleStatus == 1){
+            toggleStatus = 0;
+            document.getElementById("menu").style.left = "-240px";
+        }
+        else if (toggleStatus == 0){
+            toggleStatus = 1;
+            document.getElementById("menu").style.left = "0px"
+        }
+    }
+</script>
+</body>
+</html>
